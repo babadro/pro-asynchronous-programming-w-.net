@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReturningDataFromATask", "ReturningDataFromATask\ReturningDataFromATask.csproj", "{965ACF91-B8BC-4F02-9778-85DCD8F0A60B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOBasedTasks", "IOBasedTasks\IOBasedTasks.csproj", "{5E1E9A6C-E84E-4918-A634-0B6519EF0577}"
@@ -12,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynchronousAPIs", "AsynchronousAPIs\AsynchronousAPIs.csproj", "{D51F82A7-4AA4-4C70-A5D9-8238CF992EAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskRelationships", "TaskRelationships\TaskRelationships.csproj", "{A3C10C2E-3430-46C0-950A-A6CC8A04F2DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynchronousAPIs_01", "AsynchronousAPIs_01\AsynchronousAPIs_01.csproj", "{460BACA0-87C4-4CB9-B933-F0244D59153D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,8 +47,15 @@ Global
 		{A3C10C2E-3430-46C0-950A-A6CC8A04F2DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3C10C2E-3430-46C0-950A-A6CC8A04F2DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3C10C2E-3430-46C0-950A-A6CC8A04F2DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{460BACA0-87C4-4CB9-B933-F0244D59153D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460BACA0-87C4-4CB9-B933-F0244D59153D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460BACA0-87C4-4CB9-B933-F0244D59153D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460BACA0-87C4-4CB9-B933-F0244D59153D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0409A1F7-8178-4E31-9898-3AFEFCA7BB23}
 	EndGlobalSection
 EndGlobal
