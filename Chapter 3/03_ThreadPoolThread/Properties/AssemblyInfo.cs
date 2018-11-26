@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AsynchronousAPIs_01")]
+[assembly: AssemblyTitle("03_ThreadPoolThread")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AsynchronousAPIs_01")]
+[assembly: AssemblyProduct("03_ThreadPoolThread")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("460baca0-87c4-4cb9-b933-f0244d59153d")]
+[assembly: Guid("c0bdbffa-0e03-493e-94bf-a8b48d2d87be")]
 
 // Version information for an assembly consists of the following four values:
 //
