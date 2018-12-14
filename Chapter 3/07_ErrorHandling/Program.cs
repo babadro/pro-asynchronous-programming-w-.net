@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -15,6 +16,7 @@ namespace _07_ErrorHandling
         {
             UnobserveredTaskException();
             //ErrorHandling();
+            //MultiFileImport();
         }
 
         private static void ErrorHandling()
@@ -41,14 +43,40 @@ namespace _07_ErrorHandling
 
         private static void UnobserveredTaskException()
         {
-            NonObserveredExceptionsTerminateOnError();
+            NonObservedExceptions();
+            //NonObserveredExceptionsTerminateOnError();
         }
 
+        // Ending process based on the garbage-collection triggerring.
         private static void NonObserveredExceptionsTerminateOnError()
         {
             Task t = Task.Factory.StartNew(() => TerminateOnUnHandledException(() => { throw new Exception("Boom!"); }));
             t = null;
             object[] garbage = new object[10000];
+            Random rnd = new Random();
+            while (true)
+            {
+                if (rnd.Next(garbage.Length) == 1) Thread.Sleep(1);
+                garbage[rnd.Next(garbage.Length)] = new object();
+            }
+        }
+
+        
+        // Preserve ending process with UnobservedTaskException (for .net 4.0). Process keps alive!
+        private static void NonObservedExceptions()
+        {
+            //In 4.5 unobserved error doesn't cause killing process. End therefore this string not necessary
+            // But!
+            // For .net 4.0 this string must have if you want to keep alive your process If not do it the error will rethrow on the GC thread and process will crash.
+            TaskScheduler.UnobservedTaskException += HandleTaskExceptions;
+
+            Task t = Task.Factory.StartNew(() =>
+            {
+                Console.WriteLine("About to blow..");
+                throw new Exception("Boom!");
+            });
+            t = null;
+            object[] garbage = new object[100];
             Random rnd = new Random();
             while (true)
             {
@@ -69,6 +97,15 @@ namespace _07_ErrorHandling
             }
         }
 
+        static void HandleTaskExceptions(object sender, UnobservedTaskExceptionEventArgs e)
+        {
+            Console.WriteLine(sender is Task);
+            foreach (Exception error in e.Exception.InnerExceptions)
+                Console.WriteLine(error.Message);
+
+            e.SetObserved();
+        }
+
         private static bool IgnoreXmlErrors(Exception arg)
         {
             return (arg is XmlException);
@@ -77,6 +114,16 @@ namespace _07_ErrorHandling
         private static void Import(string fullName)
         {
             XElement doc = XElement.Load(fullName);
+        }
+
+        private static void MultiFileImport()
+        {
+            Task[] importTasks = (from file in new DirectoryInfo(@"..\..\data").GetFiles("*.xml")
+                                  select Task.Factory.StartNew(() => Import(file.FullName)))
+                                .ToArray();
+
+            Task.WaitAll(importTasks);
+
         }
     }
 }
