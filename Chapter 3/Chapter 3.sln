@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_ThreadPoolThread", "03_T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_LongRunningTask", "04_LongRunningTask\04_LongRunningTask.csproj", "{1870658E-6E38-425C-A865-9230AEAA9A03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XXX_AsynchronousAPIs", "05_AsynchronousAPIs\XXX_AsynchronousAPIs.csproj", "{10ADF62F-C84E-4372-8175-6CC564AE3BC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_AsynchronousAPIs", "05_AsynchronousAPIs\08_AsynchronousAPIs.csproj", "{10ADF62F-C84E-4372-8175-6CC564AE3BC4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_ReturningDataFromATask", "05_ReturningDataFromATask\05_ReturningDataFromATask.csproj", "{FB83E767-0122-42B0-AC7A-42C5E855C13A}"
 EndProject
