@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_IOBasedTasks", "06_IOBas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_ErrorHandling", "07_ErrorHandling\07_ErrorHandling.csproj", "{E87B92BA-650F-466B-91FC-27A14BBF8B61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_TaskRelationships", "09_TaskRelationships\09_TaskRelationships.csproj", "{6E908A85-6FD8-40AF-B84A-DA1600538B31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{E87B92BA-650F-466B-91FC-27A14BBF8B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E87B92BA-650F-466B-91FC-27A14BBF8B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E87B92BA-650F-466B-91FC-27A14BBF8B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E908A85-6FD8-40AF-B84A-DA1600538B31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E908A85-6FD8-40AF-B84A-DA1600538B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E908A85-6FD8-40AF-B84A-DA1600538B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E908A85-6FD8-40AF-B84A-DA1600538B31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
